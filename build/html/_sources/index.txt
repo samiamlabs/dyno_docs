@@ -1,5 +1,5 @@
 .. Dyno documentation master file, created by
-   sphinx-quickstart on Sun Jun 24 22:18:35 2018.
+   sphinx-quickstart on Sun Jun 24 22:28:59 2018.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
