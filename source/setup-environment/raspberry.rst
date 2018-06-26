@@ -12,4 +12,6 @@ because it really sucks to destroy your main drive.
 The next step is to enable SSH.
 Hookup the Pi to a keyboard and monitor and follow the instructions `here <https://www.raspberrypi.org/documentation/remote-access/ssh/>`_.
 
+.. note:: The latest Firefox (version 55) is not supported on the Raspberry kernel, use ``sudo apt-get install chromium-browser`` instead.
+
 Follow the same steps on :doc:`install` for Xenial to complete the installation on Mate.
