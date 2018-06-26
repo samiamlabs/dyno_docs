@@ -2,8 +2,6 @@
 Setup workspace
 ====================
 
-Setup your `ssh-key <https://help.github.com/articles/connecting-to-github-with-ssh/>`_ on GitHub if not done already.
-
 Catkin build tools
 ----------------------------
 

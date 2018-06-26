@@ -166,8 +166,15 @@ because it really sucks to destroy your main drive.
 <p class="first admonition-title">Note</p>
 <p class="last">Ubuntu Mate is not currently supported on Pi B3+, don’t use the B3+ model for now!</p>
 </div>
-<p>The next step is to enable SSH.
-Hookup the Pi to a keyboard and monitor and follow the instructions <a class="reference external" href="https://www.raspberrypi.org/documentation/remote-access/ssh/">here</a>.</p>
+<p>The next step is to enable SSH. Hookup the Pi to a keyboard and monitor and execute the following.</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">enable</span> <span class="n">ssh</span>
+<span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">start</span> <span class="n">ssh</span>
+</pre></div>
+</div>
+<p>Then copy your ssh-key from your workstation to the Pi.</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span><span class="o">-</span><span class="n">copy</span><span class="o">-</span><span class="nb">id</span> <span class="o">-</span><span class="n">i</span> <span class="o">~/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="o">.</span><span class="n">pub</span> <span class="n">pi</span><span class="nd">@x</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">x</span>
+</pre></div>
+</div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The latest Firefox (version 55) is not supported on the Raspberry kernel, use <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">chromium-browser</span></code> instead.</p>
