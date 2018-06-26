@@ -5,4 +5,5 @@ Dyno Robotics Documentation
 .. toctree::
    :maxdepth: 2
 
-   setup-environment/setup.rst
+   setup-environment/setup
+   repositories

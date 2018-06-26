@@ -1,6 +1,6 @@
 
 Setup environment
-=========
+================
 
 This chapter will cover how to setup and configure your development environment.
 
