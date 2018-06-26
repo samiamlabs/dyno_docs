@@ -83,7 +83,7 @@
             
             
               <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="setup.html">Setup development environment</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="setup.html">Setup environment</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="install.html">Installing ROS</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">ROS on Raspberry Pi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workspace.html">Setup workspace</a></li>
@@ -134,7 +134,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="setup.html">Setup development environment</a> &raquo;</li>
+          <li><a href="setup.html">Setup environment</a> &raquo;</li>
         
       <li>ROS on Raspberry Pi</li>
     
@@ -157,6 +157,17 @@
             
   <div class="section" id="ros-on-raspberry-pi">
 <h1>ROS on Raspberry Pi<a class="headerlink" href="#ros-on-raspberry-pi" title="Permalink to this headline">¶</a></h1>
+<p>The easiest way to setup ROS on Raspberry Pi is to install <a class="reference external" href="https://ubuntu-mate.org/raspberry-pi/">Ubuntu Mate</a>.
+Although it’s possible to flash your SD using the terminal I would recommend to use a graphical tool to assist,
+because it really sucks to destroy your main drive.
+<a class="reference external" href="https://etcher.io/">Etcher</a> is available on Linux, MacOS and Windows to write the image to the SD card.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Ubuntu Mate is not currently supported on Pi B3+, don’t use the B3+ model for now!</p>
+</div>
+<p>The next step is to enable SSH.
+Hookup the Pi to a keyboard and monitor and follow the instructions <a class="reference external" href="https://www.raspberrypi.org/documentation/remote-access/ssh/">here</a>.</p>
+<p>Follow the same steps on <a class="reference internal" href="install.html"><span class="doc">Installing ROS</span></a> for Xenial to complete the installation on Mate.</p>
 </div>
 
 

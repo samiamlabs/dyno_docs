@@ -82,10 +82,15 @@
             
             
               <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="setup.html">Setup development environment</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="setup.html">Setup environment</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="install.html">Installing ROS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="raspberry.html">ROS on Raspberry Pi</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Setup workspace</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Setup workspace</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#catkin-build-tools">Catkin build tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ros-repositories">ROS repositories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#documentation">Documentation</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -133,7 +138,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="setup.html">Setup development environment</a> &raquo;</li>
+          <li><a href="setup.html">Setup environment</a> &raquo;</li>
         
       <li>Setup workspace</li>
     
@@ -156,6 +161,43 @@
             
   <div class="section" id="setup-workspace">
 <h1>Setup workspace<a class="headerlink" href="#setup-workspace" title="Permalink to this headline">¶</a></h1>
+<p>Setup your <a class="reference external" href="https://help.github.com/articles/connecting-to-github-with-ssh/">ssh-key</a> on GitHub if not done already.</p>
+<div class="section" id="catkin-build-tools">
+<h2>Catkin build tools<a class="headerlink" href="#catkin-build-tools" title="Permalink to this headline">¶</a></h2>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span>mkdir ~/Code &amp;&amp; cd ~/Code
+git clone git@github.com:ErikOrjehag/dyno-shell.git
+cd dyno-shell
+cp rosenv-templ.sh ~/.rosenv
+echo &quot;source ~/.rosenv&quot; &gt;&gt; ~/.bashrc
+mkdir -p ~/catkin_ws/src
+source ~/.bashrc
+echo $ROS_PACKAGE_PATH
+type dmake
+dmake
+</pre></div>
+</div>
+</div>
+<div class="section" id="ros-repositories">
+<h2>ROS repositories<a class="headerlink" href="#ros-repositories" title="Permalink to this headline">¶</a></h2>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">samiamlabs</span><span class="o">/</span><span class="n">dyno</span><span class="o">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">samiamlabs</span><span class="o">/</span><span class="n">omnibot_driver</span><span class="o">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">samiamlabs</span><span class="o">/</span><span class="n">mecanum_controller</span><span class="o">.</span><span class="n">git</span>
+<span class="nb">type</span> <span class="n">ddep</span>
+<span class="n">ddep</span>
+<span class="n">dmake</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">Code</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">samiamlabs</span><span class="o">/</span><span class="n">dyno_docs</span><span class="o">.</span><span class="n">git</span>
+<span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">autobuild</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">rtd</span><span class="o">-</span><span class="n">theme</span> <span class="n">testresources</span>
+<span class="n">cd</span> <span class="n">dyno_docs</span>
+<span class="n">make</span> <span class="n">html</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 
