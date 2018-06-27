@@ -11,8 +11,10 @@ Catkin build tools
   git clone git@github.com:ErikOrjehag/dyno-shell.git
   cd dyno-shell
   cp rosenv-templ.sh ~/.rosenv
-  echo "source ~/.rosenv" >> ~/.bashrc
   mkdir -p ~/catkin_ws/src
+  cd ~/catkin_ws
+  catkin_make
+  echo "source ~/.rosenv" >> ~/.bashrc
   source ~/.bashrc
   echo $ROS_PACKAGE_PATH
   type dmake
