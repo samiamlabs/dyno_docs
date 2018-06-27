@@ -1,5 +1,5 @@
 
-ROS on Raspberry Pi
+Raspberry Pi
 ===================
 
 The easiest way to setup ROS on Raspberry Pi is to install `Ubuntu Mate <https://ubuntu-mate.org/raspberry-pi/>`_.
@@ -23,5 +23,7 @@ Then copy your ssh-key from your workstation to the Pi.
   ssh-copy-id -i ~/.ssh/id_rsa.pub pi@x.x.x.x
 
 .. note:: The latest Firefox (version 55) is not supported on the Raspberry kernel, use ``sudo apt-get install chromium-browser`` instead.
+
+You might want add the Pi to your *~/.ssh/config* file to `make your life easier <https://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/>`_.
 
 Follow the same steps on :doc:`install` for Xenial to complete the installation on Mate.
