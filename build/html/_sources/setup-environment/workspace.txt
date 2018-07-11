@@ -12,7 +12,7 @@ Catkin Tools
   sudo apt-get update
   sudo apt-get install python-catkin-tools
 
-Dyno shell tools
+Catkin build tools
 ----------------------------
 
 .. code:: bash
@@ -23,9 +23,12 @@ Dyno shell tools
   cp rosenv-templ.sh ~/.rosenv
   mkdir -p ~/catkin_ws/src
   cd ~/catkin_ws
-  catkin build
+  catkin_make
   echo "source ~/.rosenv" >> ~/.bashrc
   source ~/.bashrc
+  echo $ROS_PACKAGE_PATH
+  type dmake
+  dmake
 
 ROS repositories
 ----------------------------------

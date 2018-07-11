@@ -11,12 +11,6 @@ Short description of this repo...
 
 `More... <https://github.com/samiamlabs/dyno>`__
 
-dyno_hsr
--------------------
-Short description of this repo...
-
-`More... <https://github.com/samiamlabs/dyno_hsr>`__
-
 omnibot_driver
 -------------------
 
