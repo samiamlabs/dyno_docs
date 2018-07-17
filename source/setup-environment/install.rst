@@ -2,6 +2,8 @@
 Installing ROS
 ==============
 
+.. _ros-setup:
+
 The Dyno robotics stack is supported on `ROS Kinetic <http://wiki.ros.org/kinetic>`_
 and `Ubuntu 16.04 <http://releases.ubuntu.com/16.04>`_ (Xenial).
 The following commands will install ROS on a fresh Ubuntu 16.04 system.

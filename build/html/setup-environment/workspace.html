@@ -88,13 +88,15 @@
 <li class="toctree-l2"><a class="reference internal" href="raspberry.html">Raspberry Pi</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Setup workspace</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#catkin-tools">Catkin Tools</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#catkin-build-tools">Catkin build tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dyno-shell-tools">Dyno shell tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ros-repositories">ROS repositories</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#documentation">Documentation</a></li>
 </ul>
 </li>
 </ul>
 </li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../repositories.html">Repositories</a></li>
 </ul>
 
@@ -153,20 +155,17 @@ sudo apt-get install python-catkin-tools
 </pre></div>
 </div>
 </div>
-<div class="section" id="catkin-build-tools">
-<h2>Catkin build tools<a class="headerlink" href="#catkin-build-tools" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dyno-shell-tools">
+<h2>Dyno shell tools<a class="headerlink" href="#dyno-shell-tools" title="Permalink to this headline">¶</a></h2>
 <div class="code bash highlight-python"><div class="highlight"><pre>mkdir ~/Code &amp;&amp; cd ~/Code
 git clone git@github.com:ErikOrjehag/dyno-shell.git
 cd dyno-shell
 cp rosenv-templ.sh ~/.rosenv
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws
-catkin_make
+catkin build
 echo &quot;source ~/.rosenv&quot; &gt;&gt; ~/.bashrc
 source ~/.bashrc
-echo $ROS_PACKAGE_PATH
-type dmake
-dmake
 </pre></div>
 </div>
 </div>
