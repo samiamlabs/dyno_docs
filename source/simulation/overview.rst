@@ -14,5 +14,6 @@ Simulation
    environment-variables
    teleop
    exploration
+   maps
 
 The dyno repository allow you to simulate a few different robot platforms.

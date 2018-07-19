@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Simulation &mdash; Dyno 1 documentation</title>
+  <title>Guide: Loading and saving maps &mdash; Dyno 1 documentation</title>
   
 
   
@@ -31,8 +31,9 @@
 
   
     <link rel="top" title="Dyno 1 documentation" href="../index.html"/>
-        <link rel="next" title="Getting Started" href="getting-started.html"/>
-        <link rel="prev" title="Setup workspace" href="../setup-environment/workspace.html"/> 
+        <link rel="up" title="Simulation" href="overview.html"/>
+        <link rel="next" title="Repositories" href="../repositories.html"/>
+        <link rel="prev" title="Guide: Exploration" href="exploration.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -85,13 +86,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../setup-environment/setup.html">Setup environment</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Simulation</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Simulation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="robots.html">Robots</a></li>
 <li class="toctree-l2"><a class="reference internal" href="environment-variables.html">Environment Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="teleop.html">Teleop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exploration.html">Guide: Exploration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="maps.html">Guide: Loading and saving maps</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Guide: Loading and saving maps</a></li>
 </ul>
 </li>
 </ul>
@@ -127,11 +128,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>Simulation</li>
+          <li><a href="overview.html">Simulation</a> &raquo;</li>
+      
+    <li>Guide: Loading and saving maps</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/simulation/overview.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/simulation/maps.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -141,37 +144,47 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="simulation">
-<h1>Simulation<a class="headerlink" href="#simulation" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="guide-loading-and-saving-maps">
+<h1>Guide: Loading and saving maps<a class="headerlink" href="#guide-loading-and-saving-maps" title="Permalink to this headline">¶</a></h1>
+<p>Open a terinal and run <cite>roslaunch dyno_gazebo concert_client.launch</cite></p>
+<p>Open <a class="reference external" href="http:/io.dynorobotics.se">web_interface</a> in a browser. Make sure that hostname set to your computer.</p>
+<p>Start making a new map toggling the <em>cartographer load new 2d</em> switch in the
+<em>Capabilies</em> section of the web interface.</p>
 <div class="align-centered figure align-center">
-<a class="reference internal image-reference" href="../_images/overview.gif"><img alt="../_images/overview.gif" src="../_images/overview.gif" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="../_images/new_map.gif"><img alt="../_images/new_map.gif" src="../_images/new_map.gif" style="width: 50%;" /></a>
 </div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="robots.html">Robots</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="robots.html#omnibot">Omnibot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="robots.html#turtlebot3">Turtlebot3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="robots.html#magni">Magni</a></li>
-<li class="toctree-l2"><a class="reference internal" href="robots.html#holonomic">Holonomic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="robots.html#id1">Holonomic</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="environment-variables.html">Environment Variables</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="environment-variables.html#descriptions">Descriptions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="environment-variables.html#values">Values</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="teleop.html">Teleop</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="teleop.html#gamepad">GamePad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="teleop.html#playsation">Playsation</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="exploration.html">Guide: Exploration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="maps.html">Guide: Loading and saving maps</a></li>
-</ul>
+<p>Enable navigation with move_base by toggling navigation.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="../_images/new_map2.gif"><img alt="../_images/new_map2.gif" src="../_images/new_map2.gif" style="width: 50%;" /></a>
 </div>
-<p>The dyno repository allow you to simulate a few different robot platforms.</p>
+<p>Move around in the environment by sending navigation goals in rviz.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="../_images/new_map3.gif"><img alt="../_images/new_map3.gif" src="../_images/new_map3.gif" style="width: 50%;" /></a>
+</div>
+<p>You also drive around manually by using a joystick or keyboard. See <a class="reference internal" href="teleop.html"><em>Teleop</em></a> for more details.</p>
+<p>Alternativly you can use the <em>Exploration</em> Rapp to make the robot explore the environment autonomously. See <a class="reference internal" href="exploration.html"><em>Guide: Exploration</em></a>.g</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="../_images/new_map4.gif"><img alt="../_images/new_map4.gif" src="../_images/new_map4.gif" style="width: 50%;" /></a>
+</div>
+<p>When you have finished mapping, first click the <em>Finish Trajectory 0</em> button and then
+the <em>Save State</em> button in the <em>Cartographer</em>.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="../_images/new_map5.gif"><img alt="../_images/new_map5.gif" src="../_images/new_map5.gif" style="width: 50%;" /></a>
+</div>
+<p>The <em>Finish Trajectory 0</em> button freezes the trajectory and runs some optimizations,
+so you will not be able to coninue mapping after pressing is. (Saving the sate without finishing trajectory first also works)</p>
+<p>Turn off mapping.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="../_images/new_map6.gif"><img alt="../_images/new_map6.gif" src="../_images/new_map6.gif" style="width: 50%;" /></a>
+</div>
+<p>Toggle the <em>cartographer load state 2d</em> switch to load the saved map.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="../_images/new_map7.gif"><img alt="../_images/new_map7.gif" src="../_images/new_map7.gif" style="width: 50%;" /></a>
+</div>
+<p>The robot will start on a new trajectory (green) and continue mapping from where it left off.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="../_images/new_map8.gif"><img alt="../_images/new_map8.gif" src="../_images/new_map8.gif" style="width: 50%;" /></a>
+</div>
 </div>
 
 
@@ -181,10 +194,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="getting-started.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../repositories.html" class="btn btn-neutral float-right" title="Repositories" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../setup-environment/workspace.html" class="btn btn-neutral" title="Setup workspace" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="exploration.html" class="btn btn-neutral" title="Guide: Exploration" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
