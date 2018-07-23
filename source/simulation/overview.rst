@@ -15,5 +15,6 @@ Simulation
    teleop
    exploration
    maps
+   route_scheduler
 
 The dyno repository allow you to simulate a few different robot platforms.

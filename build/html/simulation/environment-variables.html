@@ -102,6 +102,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="teleop.html">Teleop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exploration.html">Guide: Exploration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maps.html">Guide: Loading and saving maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="route_scheduler.html">Guide: Route Scheduler</a></li>
 </ul>
 </li>
 </ul>
@@ -166,8 +169,8 @@
 <h3>DYNO_DEFAULT_RAPP<a class="headerlink" href="#dyno-default-rapp" title="Permalink to this headline">¶</a></h3>
 <p>What <a class="reference external" href="http://wiki.ros.org/rocon/indigo/Guide#rocon_app_platform.Rapps">Robot App</a> (Rapp) shoud start automaticly when you bring up a <a class="reference external" href="http://wiki.ros.org/rocon/indigo/Guide#rocon_concert.The_Concert">Concert Client</a>.</p>
 <div class="line-block">
-<div class="line">Simulation: <code class="docutils literal"><span class="pre">roslaunch</span> <span class="pre">dyno_gazebo</span> <span class="pre">concert_client.launch</span></code></div>
-<div class="line">Real Robot: <code class="docutils literal"><span class="pre">roslaunch</span> <span class="pre">dyno_bringup</span> <span class="pre">concert_client.launch</span></code></div>
+<div class="line">Simulation: <code class="docutils literal"><span class="pre">roslaunch</span> <span class="pre">dyno_gazebo</span> <span class="pre">bringup.launch</span></code></div>
+<div class="line">Real Robot: <code class="docutils literal"><span class="pre">roslaunch</span> <span class="pre">dyno_bringup</span> <span class="pre">bringup.launch</span></code></div>
 </div>
 </div>
 <hr class="docutils" />
@@ -198,9 +201,9 @@ holonomic/omni plattform, so this variable sould be set to false when simulating
 <h2>Values<a class="headerlink" href="#values" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
-<col width="28%" />
-<col width="35%" />
-<col width="37%" />
+<col width="25%" />
+<col width="31%" />
+<col width="43%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Name</th>
@@ -210,8 +213,8 @@ holonomic/omni plattform, so this variable sould be set to false when simulating
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>DYNO_BASE</td>
-<td>omnibot</td>
-<td>turtlebot3, magni, holonomic, diff-drive</td>
+<td>turtlebot3</td>
+<td>omnibot, magni, holonomic, diff-drive, quadrotor</td>
 </tr>
 <tr class="row-odd"><td>DYNO_DEFAULT_RAPP</td>
 <td>dyno_common_rapps/exploration</td>

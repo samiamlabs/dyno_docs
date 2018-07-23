@@ -63,12 +63,12 @@ Serial port to use for joystick.
 Values
 ------
 
-==============================  =====================================  ========================================
+==============================  =====================================  ===================================================
 Name                            Defalut Value                          Optional Values
-==============================  =====================================  ========================================
-DYNO_BASE                       omnibot                                turtlebot3, magni, holonomic, diff-drive
+==============================  =====================================  ===================================================
+DYNO_BASE                       turtlebot3                             omnibot, magni, holonomic, diff-drive, quadrotor
 DYNO_DEFAULT_RAPP               dyno_common_rapps/exploration          dyno_common_rapps/waypoint_navigation
 DYNO_USE_ROS_CONTROL_FOR_BASE   false                                  true
 DYNO_JOY_TYPE                   gamepad                                xbox360, playstation
 JOY_SERIAL_PORT                 /dev/input/js0                         --
-==============================  =====================================  ========================================
+==============================  =====================================  ===================================================

@@ -7,7 +7,7 @@ Magni
    :figclass: align-left
 
 ::
-  
+
   export DYNO_BASE=magni
   export DYNO_USE_ROS_CONTROL_FOR_BASE="true"
-  roslaunch dyno_gazebo concert_client.launch
+  roslaunch dyno_gazebo bringup.launch

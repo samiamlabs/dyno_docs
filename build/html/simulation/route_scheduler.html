@@ -1,0 +1,255 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Guide: Route Scheduler &mdash; Dyno 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Dyno 1 documentation" href="../index.html"/>
+        <link rel="up" title="Simulation" href="overview.html"/>
+        <link rel="next" title="Repositories" href="../repositories.html"/>
+        <link rel="prev" title="Guide: Loading and saving maps" href="maps.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Dyno
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../setup-environment/setup.html">Setup environment</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">Simulation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="robots.html">Robots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environment-variables.html">Environment Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teleop.html">Teleop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exploration.html">Guide: Exploration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maps.html">Guide: Loading and saving maps</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Guide: Route Scheduler</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../repositories.html">Repositories</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Dyno</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="overview.html">Simulation</a> &raquo;</li>
+      
+    <li>Guide: Route Scheduler</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/simulation/route_scheduler.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="guide-route-scheduler">
+<h1>Guide: Route Scheduler<a class="headerlink" href="#guide-route-scheduler" title="Permalink to this headline">¶</a></h1>
+<p>Open a terinal and run:</p>
+<div class="highlight-python"><div class="highlight"><pre>roslaunch dyno_gazebo bringup.launch
+</pre></div>
+</div>
+<p>Open <a class="reference external" href="http:/io.dynorobotics.se">web_interface</a> in a browser. Make sure that hostname set to your computer.</p>
+<p>Start the Route scheduler app by clicking on <em>Route Scheduler</em> in the <em>Robot Apps</em>
+section.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="../_images/route_scheduler.gif"><img alt="../_images/route_scheduler.gif" src="../_images/route_scheduler.gif" style="width: 30%;" /></a>
+</div>
+<p>Previously saved locations will be automaticly loaded when you start the app.
+To add additional locations, move the robot to where you want it and press
+the <em>Add Current Location</em> button in the <em>World State</em> section of the web interface.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="../_images/route_scheduler2.gif"><img alt="../_images/route_scheduler2.gif" src="../_images/route_scheduler2.gif" style="width: 80%;" /></a>
+</div>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="../_images/route_scheduler3.png"><img alt="../_images/route_scheduler3.png" src="../_images/route_scheduler3.png" style="width: 80%;" /></a>
+</div>
+<p>Add a waypoint/location to the queue by selecting it in the dropdown list and
+clickin the <em>+</em> button.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="../_images/route_scheduler4.gif"><img alt="../_images/route_scheduler4.gif" src="../_images/route_scheduler4.gif" style="width: 50%;" /></a>
+</div>
+<p>Click the <em>Start</em> button to start moving the robot.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="../_images/route_scheduler5.gif"><img alt="../_images/route_scheduler5.gif" src="../_images/route_scheduler5.gif" style="width: 100%;" /></a>
+</div>
+<p>To get an idea of what is happening behind the scenes, run this in a new terminal:</p>
+<div class="highlight-python"><div class="highlight"><pre>rosrun rqt_py_trees rqt_py_trees
+</pre></div>
+</div>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="../_images/route_scheduler6.gif"><img alt="../_images/route_scheduler6.gif" src="../_images/route_scheduler6.gif" style="width: 100%;" /></a>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../repositories.html" class="btn btn-neutral float-right" title="Repositories" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="maps.html" class="btn btn-neutral" title="Guide: Loading and saving maps" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Samuel Lindgren.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
