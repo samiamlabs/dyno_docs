@@ -10,4 +10,4 @@ Omnibot
 
   export DYNO_BASE=omnibot
   export DYNO_USE_ROS_CONTROL_FOR_BASE="false"
-  roslaunch dyno_gazebo concert_client.launch
+  roslaunch dyno_gazebo bringup.launch

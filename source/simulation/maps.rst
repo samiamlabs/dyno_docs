@@ -3,7 +3,7 @@ Guide: Loading and saving maps
 
 .. _web_interface: http:/io.dynorobotics.se
 
-Open a terinal and run `roslaunch dyno_gazebo concert_client.launch`
+Open a terinal and run `roslaunch dyno_gazebo bringup.launch`
 
 Open `web_interface`_ in a browser. Make sure that hostname set to your computer.
 
@@ -32,7 +32,7 @@ Move around in the environment by sending navigation goals in rviz.
 You also drive around manually by using a joystick or keyboard. See :doc:`/simulation/teleop` for more details.
 
 
-Alternativly you can use the *Exploration* Rapp to make the robot explore the environment autonomously. See :doc:`/simulation/exploration`.g
+Alternativly you can use the *Exploration* Rapp to make the robot explore the environment autonomously. See :doc:`/simulation/exploration`.
 
 .. figure:: /_static/simulation/new_map4.gif
    :width: 50%
@@ -70,4 +70,3 @@ The robot will start on a new trajectory (green) and continue mapping from where
    :width: 50%
    :align: center
    :figclass: align-centered
-   

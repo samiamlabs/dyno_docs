@@ -19,8 +19,8 @@ DYNO_DEFAULT_RAPP
 
 What `Robot App`_ (Rapp) shoud start automaticly when you bring up a `Concert Client`_.
 
-| Simulation: ``roslaunch dyno_gazebo concert_client.launch``
-| Real Robot: ``roslaunch dyno_bringup concert_client.launch``
+| Simulation: ``roslaunch dyno_gazebo bringup.launch``
+| Real Robot: ``roslaunch dyno_bringup bringup.launch``
 
 ------------------------------------
 

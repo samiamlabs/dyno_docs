@@ -10,4 +10,4 @@ Holonomic
 
   export DYNO_BASE=diff_drive
   export DYNO_USE_ROS_CONTROL_FOR_BASE="true"
-  roslaunch dyno_gazebo concert_client.launch
+  roslaunch dyno_gazebo bringup.launch

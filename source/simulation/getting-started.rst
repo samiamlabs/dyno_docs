@@ -9,4 +9,4 @@ Go the `dyno`_ repository and follow instructions to install cartographer and dy
 
 Start simulation by running: ::
 
-  roslaunch dyno_gazebo concert_client.launch
+  roslaunch dyno_gazebo bringup.launch
