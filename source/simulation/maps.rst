@@ -7,7 +7,7 @@ Open a terinal and run `roslaunch dyno_gazebo bringup.launch`
 
 Open `web_interface`_ in a browser. Make sure that hostname set to your computer.
 
-Start making a new map toggling the *cartographer load new 2d* switch in the
+Start making a new map toggling the *cartographer new 2d* switch in the
 *Capabilies* section of the web interface.
 
 .. figure:: /_static/simulation/new_map.gif
