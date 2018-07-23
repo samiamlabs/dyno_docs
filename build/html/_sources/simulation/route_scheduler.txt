@@ -32,7 +32,7 @@ the *Add Current Location* button in the *World State* section of the web interf
    :figclass: align-centered
 
 Add a waypoint/location to the queue by selecting it in the dropdown list and
-clickin the *+* button.
+clicking the *+* button.
 
 .. figure:: /_static/simulation/route_scheduler4.gif
    :width: 50%
