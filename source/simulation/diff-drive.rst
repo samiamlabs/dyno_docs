@@ -1,5 +1,5 @@
-Holonomic
----------
+Diff Drive
+----------
 
 .. figure:: /_static/simulation/diff_drive.png
    :width: 30%
