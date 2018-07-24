@@ -2,7 +2,7 @@ Diff Drive
 ----------
 
 .. figure:: /_static/simulation/diff_drive.png
-   :width: 30%
+   :width: 40%
    :align: left
    :figclass: align-left
 

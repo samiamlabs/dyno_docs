@@ -2,7 +2,7 @@ Holonomic
 ---------
 
 .. figure:: /_static/simulation/holonomic.png
-   :width: 30%
+   :width: 40%
    :align: left
    :figclass: align-left
 

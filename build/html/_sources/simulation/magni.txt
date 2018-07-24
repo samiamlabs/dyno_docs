@@ -2,7 +2,7 @@ Magni
 -----
 
 .. figure:: /_static/simulation/magni.png
-   :width: 30%
+   :width: 40%
    :align: left
    :figclass: align-left
 

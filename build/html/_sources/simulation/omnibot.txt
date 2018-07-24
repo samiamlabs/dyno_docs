@@ -2,7 +2,7 @@ Omnibot
 -------
 
 .. figure:: /_static/simulation/omnibot.png
-   :width: 30%
+   :width: 40%
    :align: left
    :figclass: align-left
 

@@ -2,7 +2,7 @@ Quadrotor
 ---------
 
 .. figure:: /_static/simulation/quadrotor.png
-   :width: 30%
+   :width: 40%
    :align: left
    :figclass: align-left
 

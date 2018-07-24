@@ -2,7 +2,7 @@ Turtlebot3
 ----------
 
 .. figure:: /_static/simulation/turtlebot3.png
-   :width: 30%
+   :width: 40%
    :align: left
 
 ::
