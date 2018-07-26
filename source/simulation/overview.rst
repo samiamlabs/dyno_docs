@@ -16,5 +16,6 @@ Simulation
    exploration
    maps
    route_scheduler
+   unity
 
 The dyno repository allow you to simulate a few different robot platforms.
