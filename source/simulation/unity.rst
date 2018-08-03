@@ -8,9 +8,19 @@ You need to run rosbridge and a file server that trasfers the urdf and the mesh 
 
   roslaunch dyno_unity bringup.launch
 
+Importing URDF to Unity form Ros
+--------------------------------
 
 .. raw:: html
 
  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/jVHsBEObM4s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+ </div>
+
+Moving pallet in Unity
+----------------------
+.. raw:: html
+
+ <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/7NCSMg_bq1I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
  </div>
