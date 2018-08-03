@@ -30,6 +30,7 @@ DYNO_USE_ROS_CONTROL_FOR_BASE
 .. _mecanum_controller: https://github.com/samiamlabs/mecanum_controller
 .. _diff_drive_controller: http://wiki.ros.org/diff_drive_controller
 .. _four_wheel_steering_controller: https://github.com/ros-controls/ros_controllers/tree/melodic-devel/four_wheel_steering_controller
+.. _tricycle_controller: https://github.com/samiamlabs/tricycle_controller
 .. _ros_control: http://wiki.ros.org/ros_control
 
 Changes whether the robot base subscribes to */mobile_base_controller/cmd_vel* or
@@ -39,7 +40,7 @@ If set to true, a controller that translates */mobile_base_controller/cmd_vel*
 to joint velocities is started.
 
 Diffrent controllers are started depending on what base is used.
-The controllers currently used are: `mecanum_controller`_, `diff_drive_controller`_, `four_wheel_steering_controller`_.
+The controllers currently used are: `mecanum_controller`_, `diff_drive_controller`_, `four_wheel_steering_controller`_ and `tricycle_controller`_.
 
 Defalut Gazebo physics with `ros_control`_ doesn't currently work for the
 holonomic/omni plattform, so this variable sould be set to false when simulating theese platforms.
