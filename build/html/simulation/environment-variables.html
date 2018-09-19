@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -22,26 +24,21 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="Dyno 1 documentation" href="../index.html"/>
-        <link rel="up" title="Simulation" href="overview.html"/>
-        <link rel="next" title="Teleop" href="teleop.html"/>
-        <link rel="prev" title="Robots" href="robots.html"/> 
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Teleop" href="teleop.html" />
+    <link rel="prev" title="Robots" href="robots.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -82,14 +79,17 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../setup-environment/setup.html">Setup environment</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="overview.html">Simulation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="robots.html">Robots</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Environment Variables</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Environment Variables</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#descriptions">Descriptions</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#dyno-base">DYNO_BASE</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#dyno-default-rapp">DYNO_DEFAULT_RAPP</a></li>
@@ -122,36 +122,56 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">Dyno</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Dyno</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="overview.html">Simulation</a> &raquo;</li>
-      
-    <li>Environment Variables</li>
+        
+      <li>Environment Variables</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/simulation/environment-variables.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/simulation/environment-variables.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -170,8 +190,8 @@
 <h3>DYNO_DEFAULT_RAPP<a class="headerlink" href="#dyno-default-rapp" title="Permalink to this headline">¶</a></h3>
 <p>What <a class="reference external" href="http://wiki.ros.org/rocon/indigo/Guide#rocon_app_platform.Rapps">Robot App</a> (Rapp) shoud start automaticly when you bring up a <a class="reference external" href="http://wiki.ros.org/rocon/indigo/Guide#rocon_concert.The_Concert">Concert Client</a>.</p>
 <div class="line-block">
-<div class="line">Simulation: <code class="docutils literal"><span class="pre">roslaunch</span> <span class="pre">dyno_gazebo</span> <span class="pre">bringup.launch</span></code></div>
-<div class="line">Real Robot: <code class="docutils literal"><span class="pre">roslaunch</span> <span class="pre">dyno_bringup</span> <span class="pre">bringup.launch</span></code></div>
+<div class="line">Simulation: <code class="docutils literal notranslate"><span class="pre">roslaunch</span> <span class="pre">dyno_gazebo</span> <span class="pre">bringup.launch</span></code></div>
+<div class="line">Real Robot: <code class="docutils literal notranslate"><span class="pre">roslaunch</span> <span class="pre">dyno_bringup</span> <span class="pre">bringup.launch</span></code></div>
 </div>
 </div>
 <hr class="docutils" />
@@ -183,7 +203,7 @@ uses <a class="reference external" href="http://wiki.ros.org/ros_control">ros_co
 to joint velocities is started.</p>
 <p>Diffrent controllers are started depending on what base is used.
 The controllers currently used are: <a class="reference external" href="https://github.com/samiamlabs/mecanum_controller">mecanum_controller</a>, <a class="reference external" href="http://wiki.ros.org/diff_drive_controller">diff_drive_controller</a>, <a class="reference external" href="https://github.com/ros-controls/ros_controllers/tree/melodic-devel/four_wheel_steering_controller">four_wheel_steering_controller</a> and <a class="reference external" href="https://github.com/samiamlabs/tricycle_controller">tricycle_controller</a>.</p>
-<p>Defalut Gazebo physics with <a class="reference external" href="http://wiki.ros.org/ros_control">ros_control</a> doesn&#8217;t currently work for the
+<p>Defalut Gazebo physics with <a class="reference external" href="http://wiki.ros.org/ros_control">ros_control</a> doesn’t currently work for the
 holonomic/omni plattform, so this variable sould be set to false when simulating theese platforms.</p>
 </div>
 <hr class="docutils" />
@@ -231,7 +251,7 @@ holonomic/omni plattform, so this variable sould be set to false when simulating
 </tr>
 <tr class="row-even"><td>JOY_SERIAL_PORT</td>
 <td>/dev/input/js0</td>
-<td>&#8211;</td>
+<td>–</td>
 </tr>
 </tbody>
 </table>
@@ -240,15 +260,16 @@ holonomic/omni plattform, so this variable sould be set to false when simulating
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="teleop.html" class="btn btn-neutral float-right" title="Teleop" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="teleop.html" class="btn btn-neutral float-right" title="Teleop" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="robots.html" class="btn btn-neutral" title="Robots" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="robots.html" class="btn btn-neutral" title="Robots" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -261,7 +282,7 @@ holonomic/omni plattform, so this variable sould be set to false when simulating
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -280,9 +301,11 @@ holonomic/omni plattform, so this variable sould be set to false when simulating
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
@@ -291,19 +314,13 @@ holonomic/omni plattform, so this variable sould be set to false when simulating
 
   
 
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

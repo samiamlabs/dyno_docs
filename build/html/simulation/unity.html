@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -22,26 +24,21 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="Dyno 1 documentation" href="../index.html"/>
-        <link rel="up" title="Simulation" href="overview.html"/>
-        <link rel="next" title="Repositories" href="../repositories.html"/>
-        <link rel="prev" title="Guide: Route Scheduler" href="route_scheduler.html"/> 
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Repositories" href="../repositories.html" />
+    <link rel="prev" title="Guide: Route Scheduler" href="route_scheduler.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -82,7 +79,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../setup-environment/setup.html">Setup environment</a></li>
 </ul>
 <ul class="current">
@@ -94,7 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="exploration.html">Guide: Exploration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="maps.html">Guide: Loading and saving maps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="route_scheduler.html">Guide: Route Scheduler</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Unity</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Unity</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#importing-urdf-to-unity-form-ros">Importing URDF to Unity form Ros</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#moving-pallet-in-unity">Moving pallet in Unity</a></li>
 </ul>
@@ -115,36 +115,56 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">Dyno</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Dyno</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="overview.html">Simulation</a> &raquo;</li>
-      
-    <li>Unity</li>
+        
+      <li>Unity</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/simulation/unity.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/simulation/unity.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -154,7 +174,7 @@
 <h1>Unity<a class="headerlink" href="#unity" title="Permalink to this headline">¶</a></h1>
 <p>You can use <a class="reference external" href="https://github.com/samiamlabs/dyno">ros-sharp</a> to import dyno robots into unity.
 You need to run rosbridge and a file server that trasfers the urdf and the mesh files to the windows computer running unity:</p>
-<div class="highlight-python"><div class="highlight"><pre>roslaunch dyno_unity bringup.launch
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">dyno_unity</span> <span class="n">bringup</span><span class="o">.</span><span class="n">launch</span>
 </pre></div>
 </div>
 <div class="section" id="importing-urdf-to-unity-form-ros">
@@ -171,15 +191,16 @@ You need to run rosbridge and a file server that trasfers the urdf and the mesh 
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../repositories.html" class="btn btn-neutral float-right" title="Repositories" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../repositories.html" class="btn btn-neutral float-right" title="Repositories" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="route_scheduler.html" class="btn btn-neutral" title="Guide: Route Scheduler" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="route_scheduler.html" class="btn btn-neutral" title="Guide: Route Scheduler" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -192,7 +213,7 @@ You need to run rosbridge and a file server that trasfers the urdf and the mesh 
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -211,9 +232,11 @@ You need to run rosbridge and a file server that trasfers the urdf and the mesh 
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
@@ -222,19 +245,13 @@ You need to run rosbridge and a file server that trasfers the urdf and the mesh 
 
   
 
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -22,26 +24,21 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="Dyno 1 documentation" href="../index.html"/>
-        <link rel="up" title="Setup environment" href="setup.html"/>
-        <link rel="next" title="Setup workspace" href="workspace.html"/>
-        <link rel="prev" title="Installing ROS" href="install.html"/> 
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Setup workspace" href="workspace.html" />
+    <link rel="prev" title="Installing ROS" href="install.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -82,13 +79,22 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="setup.html">Setup environment</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="install.html">Installing ROS</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Raspberry Pi</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Raspberry Pi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workspace.html">Setup workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docker.html">Docker</a></li>
 </ul>
 </li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../simulation/overview.html">Simulation</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../repositories.html">Repositories</a></li>
 </ul>
 
@@ -101,36 +107,56 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">Dyno</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Dyno</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="setup.html">Setup environment</a> &raquo;</li>
-      
-    <li>Raspberry Pi</li>
+        
+      <li>Raspberry Pi</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/setup-environment/raspberry.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/setup-environment/raspberry.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -139,41 +165,42 @@
   <div class="section" id="raspberry-pi">
 <h1>Raspberry Pi<a class="headerlink" href="#raspberry-pi" title="Permalink to this headline">¶</a></h1>
 <p>The easiest way to setup ROS on Raspberry Pi is to install <a class="reference external" href="https://ubuntu-mate.org/raspberry-pi/">Ubuntu Mate</a>.
-Although it&#8217;s possible to flash your SD using the terminal I would recommend to use a graphical tool to assist,
+Although it’s possible to flash your SD using the terminal I would recommend to use a graphical tool to assist,
 because it really sucks to destroy your main drive.
 <a class="reference external" href="https://etcher.io/">Etcher</a> is available on Linux, MacOS and Windows to write the image to the SD card.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Ubuntu Mate is not currently supported on Pi B3+, don&#8217;t use the B3+ model for now!</p>
+<p class="last">Ubuntu Mate is not currently supported on Pi B3+, don’t use the B3+ model for now!</p>
 </div>
 <p>The next step is to enable SSH. Hookup the Pi to a keyboard and monitor and execute the following.</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>sudo systemctl enable ssh
-sudo systemctl start ssh
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">enable</span> <span class="n">ssh</span>
+<span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">start</span> <span class="n">ssh</span>
 </pre></div>
 </div>
 <p>Then copy your ssh-key from your workstation to the Pi.</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>ssh-copy-id -i ~/.ssh/id_rsa.pub pi@x.x.x.x
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span><span class="o">-</span><span class="n">copy</span><span class="o">-</span><span class="nb">id</span> <span class="o">-</span><span class="n">i</span> <span class="o">~/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="o">.</span><span class="n">pub</span> <span class="n">pi</span><span class="nd">@x</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">x</span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">The latest Firefox (version 55) is not supported on the Raspberry kernel, use <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">chromium-browser</span></code> instead.</p>
+<p class="last">The latest Firefox (version 55) is not supported on the Raspberry kernel, use <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">chromium-browser</span></code> instead.</p>
 </div>
 <p>You might want add the Pi to your <em>~/.ssh/config</em> file to <a class="reference external" href="https://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/">make your life easier</a>.</p>
-<p>Follow the same steps on <a class="reference internal" href="install.html"><em>Installing ROS</em></a> for Xenial to complete the installation on Mate.</p>
+<p>Follow the same steps on <a class="reference internal" href="install.html"><span class="doc">Installing ROS</span></a> for Xenial to complete the installation on Mate.</p>
 </div>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="workspace.html" class="btn btn-neutral float-right" title="Setup workspace" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="workspace.html" class="btn btn-neutral float-right" title="Setup workspace" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="install.html" class="btn btn-neutral" title="Installing ROS" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="install.html" class="btn btn-neutral" title="Installing ROS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -186,7 +213,7 @@ sudo systemctl start ssh
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -205,9 +232,11 @@ sudo systemctl start ssh
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
@@ -216,19 +245,13 @@ sudo systemctl start ssh
 
   
 
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

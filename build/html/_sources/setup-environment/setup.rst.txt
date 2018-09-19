@@ -12,3 +12,4 @@ The first step is to setup your `ssh-key <https://help.github.com/articles/conne
    install
    raspberry
    workspace
+   docker

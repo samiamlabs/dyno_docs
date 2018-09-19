@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -22,26 +24,21 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="Dyno 1 documentation" href="../index.html"/>
-        <link rel="up" title="Setup environment" href="setup.html"/>
-        <link rel="next" title="Repositories" href="../repositories.html"/>
-        <link rel="prev" title="Raspberry Pi" href="raspberry.html"/> 
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Docker" href="docker.html" />
+    <link rel="prev" title="Raspberry Pi" href="raspberry.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -82,19 +79,26 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="setup.html">Setup environment</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="install.html">Installing ROS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="raspberry.html">Raspberry Pi</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Setup workspace</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Setup workspace</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#catkin-tools">Catkin Tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#dyno-shell-tools">Dyno shell tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ros-repositories">ROS repositories</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#documentation">Documentation</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="docker.html">Docker</a></li>
 </ul>
 </li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../simulation/overview.html">Simulation</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../repositories.html">Repositories</a></li>
@@ -109,36 +113,56 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">Dyno</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Dyno</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="setup.html">Setup environment</a> &raquo;</li>
-      
-    <li>Setup workspace</li>
+        
+      <li>Setup workspace</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/setup-environment/workspace.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/setup-environment/workspace.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -148,45 +172,45 @@
 <h1>Setup workspace<a class="headerlink" href="#setup-workspace" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="catkin-tools">
 <h2>Catkin Tools<a class="headerlink" href="#catkin-tools" title="Permalink to this headline">¶</a></h2>
-<div class="code bash highlight-python"><div class="highlight"><pre>sudo sh -c &#39;echo &quot;deb http://packages.ros.org/ros/ubuntu `lsb_release -sc` main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;
-wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
-sudo apt-get update
-sudo apt-get install python-catkin-tools
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sh</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;echo &quot;deb http://packages.ros.org/ros/ubuntu `lsb_release -sc` main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;</span>
+<span class="n">wget</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">packages</span><span class="o">.</span><span class="n">ros</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">ros</span><span class="o">.</span><span class="n">key</span> <span class="o">-</span><span class="n">O</span> <span class="o">-</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">key</span> <span class="n">add</span> <span class="o">-</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">catkin</span><span class="o">-</span><span class="n">tools</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="dyno-shell-tools">
 <h2>Dyno shell tools<a class="headerlink" href="#dyno-shell-tools" title="Permalink to this headline">¶</a></h2>
-<div class="code bash highlight-python"><div class="highlight"><pre>mkdir ~/Code &amp;&amp; cd ~/Code
-git clone git@github.com:ErikOrjehag/dyno-shell.git
-cd dyno-shell
-cp rosenv-templ.sh ~/.rosenv
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws
-catkin build
-echo &quot;source ~/.rosenv&quot; &gt;&gt; ~/.bashrc
-source ~/.bashrc
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">~/</span><span class="n">Code</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="o">~/</span><span class="n">Code</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">ErikOrjehag</span><span class="o">/</span><span class="n">dyno</span><span class="o">-</span><span class="n">shell</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">dyno</span><span class="o">-</span><span class="n">shell</span>
+<span class="n">cp</span> <span class="n">rosenv</span><span class="o">-</span><span class="n">templ</span><span class="o">.</span><span class="n">sh</span> <span class="o">~/.</span><span class="n">rosenv</span>
+<span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">~/</span><span class="n">catkin_ws</span><span class="o">/</span><span class="n">src</span>
+<span class="n">cd</span> <span class="o">~/</span><span class="n">catkin_ws</span>
+<span class="n">catkin</span> <span class="n">build</span>
+<span class="n">echo</span> <span class="s2">&quot;source ~/.rosenv&quot;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">bashrc</span>
+<span class="n">source</span> <span class="o">~/.</span><span class="n">bashrc</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="ros-repositories">
 <h2>ROS repositories<a class="headerlink" href="#ros-repositories" title="Permalink to this headline">¶</a></h2>
-<div class="code bash highlight-python"><div class="highlight"><pre>git clone git@github.com:samiamlabs/dyno.git
-git clone git@github.com:samiamlabs/omnibot_driver.git
-git clone git@github.com:samiamlabs/mecanum_controller.git
-type ddep
-ddep
-dmake
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">samiamlabs</span><span class="o">/</span><span class="n">dyno</span><span class="o">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">samiamlabs</span><span class="o">/</span><span class="n">omnibot_driver</span><span class="o">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">samiamlabs</span><span class="o">/</span><span class="n">mecanum_controller</span><span class="o">.</span><span class="n">git</span>
+<span class="nb">type</span> <span class="n">ddep</span>
+<span class="n">ddep</span>
+<span class="n">dmake</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="documentation">
 <h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
-<div class="code bash highlight-python"><div class="highlight"><pre>cd ~/Code
-git clone git@github.com:samiamlabs/dyno_docs.git
-sudo pip install sphinx sphinx-autobuild sphinx-rtd-theme testresources
-cd dyno_docs
-make html
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">Code</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">samiamlabs</span><span class="o">/</span><span class="n">dyno_docs</span><span class="o">.</span><span class="n">git</span>
+<span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">autobuild</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">rtd</span><span class="o">-</span><span class="n">theme</span> <span class="n">testresources</span>
+<span class="n">cd</span> <span class="n">dyno_docs</span>
+<span class="n">make</span> <span class="n">html</span>
 </pre></div>
 </div>
 </div>
@@ -194,15 +218,16 @@ make html
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../repositories.html" class="btn btn-neutral float-right" title="Repositories" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="docker.html" class="btn btn-neutral float-right" title="Docker" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="raspberry.html" class="btn btn-neutral" title="Raspberry Pi" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="raspberry.html" class="btn btn-neutral" title="Raspberry Pi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -215,7 +240,7 @@ make html
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -234,9 +259,11 @@ make html
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
@@ -245,19 +272,13 @@ make html
 
   
 
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

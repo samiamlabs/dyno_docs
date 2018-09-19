@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -22,26 +24,21 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="Dyno 1 documentation" href="../index.html"/>
-        <link rel="up" title="Simulation" href="overview.html"/>
-        <link rel="next" title="Repositories" href="../repositories.html"/>
-        <link rel="prev" title="Guide: Loading and saving maps" href="maps.html"/> 
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Unity" href="unity.html" />
+    <link rel="prev" title="Guide: Loading and saving maps" href="maps.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -82,7 +79,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../setup-environment/setup.html">Setup environment</a></li>
 </ul>
 <ul class="current">
@@ -93,7 +93,8 @@
 <li class="toctree-l2"><a class="reference internal" href="teleop.html">Teleop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exploration.html">Guide: Exploration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="maps.html">Guide: Loading and saving maps</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Guide: Route Scheduler</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Guide: Route Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unity.html">Unity</a></li>
 </ul>
 </li>
 </ul>
@@ -110,36 +111,56 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">Dyno</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Dyno</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="overview.html">Simulation</a> &raquo;</li>
-      
-    <li>Guide: Route Scheduler</li>
+        
+      <li>Guide: Route Scheduler</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/simulation/route_scheduler.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/simulation/route_scheduler.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -148,7 +169,7 @@
   <div class="section" id="guide-route-scheduler">
 <h1>Guide: Route Scheduler<a class="headerlink" href="#guide-route-scheduler" title="Permalink to this headline">¶</a></h1>
 <p>Open a terinal and run:</p>
-<div class="highlight-python"><div class="highlight"><pre>roslaunch dyno_gazebo bringup.launch
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">dyno_gazebo</span> <span class="n">bringup</span><span class="o">.</span><span class="n">launch</span>
 </pre></div>
 </div>
 <p>Open <a class="reference external" href="http:/io.dynorobotics.se">web_interface</a> in a browser. Make sure that hostname set to your computer.</p>
@@ -176,7 +197,7 @@ clicking the <em>+</em> button.</p>
 <a class="reference internal image-reference" href="../_images/route_scheduler5.gif"><img alt="../_images/route_scheduler5.gif" src="../_images/route_scheduler5.gif" style="width: 100%;" /></a>
 </div>
 <p>To get an idea of what is happening behind the scenes, run this in a new terminal:</p>
-<div class="highlight-python"><div class="highlight"><pre>rosrun rqt_py_trees rqt_py_trees
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rosrun</span> <span class="n">rqt_py_trees</span> <span class="n">rqt_py_trees</span>
 </pre></div>
 </div>
 <div class="align-centered figure align-center">
@@ -186,15 +207,16 @@ clicking the <em>+</em> button.</p>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../repositories.html" class="btn btn-neutral float-right" title="Repositories" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="unity.html" class="btn btn-neutral float-right" title="Unity" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="maps.html" class="btn btn-neutral" title="Guide: Loading and saving maps" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="maps.html" class="btn btn-neutral" title="Guide: Loading and saving maps" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -207,7 +229,7 @@ clicking the <em>+</em> button.</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -226,9 +248,11 @@ clicking the <em>+</em> button.</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
@@ -237,19 +261,13 @@ clicking the <em>+</em> button.</p>
 
   
 
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

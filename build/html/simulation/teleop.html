@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -22,26 +24,21 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="Dyno 1 documentation" href="../index.html"/>
-        <link rel="up" title="Simulation" href="overview.html"/>
-        <link rel="next" title="Repositories" href="../repositories.html"/>
-        <link rel="prev" title="Environment Variables" href="environment-variables.html"/> 
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Guide: Exploration" href="exploration.html" />
+    <link rel="prev" title="Environment Variables" href="environment-variables.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -82,7 +79,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../setup-environment/setup.html">Setup environment</a></li>
 </ul>
 <ul class="current">
@@ -90,11 +90,15 @@
 <li class="toctree-l2"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="robots.html">Robots</a></li>
 <li class="toctree-l2"><a class="reference internal" href="environment-variables.html">Environment Variables</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Teleop</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Teleop</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#gamepad">GamePad</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#playsation">Playsation</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="exploration.html">Guide: Exploration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maps.html">Guide: Loading and saving maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="route_scheduler.html">Guide: Route Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unity.html">Unity</a></li>
 </ul>
 </li>
 </ul>
@@ -111,36 +115,56 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">Dyno</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Dyno</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="overview.html">Simulation</a> &raquo;</li>
-      
-    <li>Teleop</li>
+        
+      <li>Teleop</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/simulation/teleop.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/simulation/teleop.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -272,15 +296,16 @@ above) and use the left joystick.</p>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../repositories.html" class="btn btn-neutral float-right" title="Repositories" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="exploration.html" class="btn btn-neutral float-right" title="Guide: Exploration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="environment-variables.html" class="btn btn-neutral" title="Environment Variables" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="environment-variables.html" class="btn btn-neutral" title="Environment Variables" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -293,7 +318,7 @@ above) and use the left joystick.</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -312,9 +337,11 @@ above) and use the left joystick.</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
@@ -323,19 +350,13 @@ above) and use the left joystick.</p>
 
   
 
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

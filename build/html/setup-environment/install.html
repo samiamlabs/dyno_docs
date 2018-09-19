@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -22,26 +24,21 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="Dyno 1 documentation" href="../index.html"/>
-        <link rel="up" title="Setup environment" href="setup.html"/>
-        <link rel="next" title="Raspberry Pi" href="raspberry.html"/>
-        <link rel="prev" title="Setup environment" href="setup.html"/> 
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Raspberry Pi" href="raspberry.html" />
+    <link rel="prev" title="Setup environment" href="setup.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -82,11 +79,15 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="setup.html">Setup environment</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">Installing ROS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Installing ROS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="raspberry.html">Raspberry Pi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workspace.html">Setup workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docker.html">Docker</a></li>
 </ul>
 </li>
 </ul>
@@ -106,36 +107,56 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">Dyno</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Dyno</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="setup.html">Setup environment</a> &raquo;</li>
-      
-    <li>Installing ROS</li>
+        
+      <li>Installing ROS</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/setup-environment/install.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/setup-environment/install.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -146,16 +167,16 @@
 <p id="ros-setup">The Dyno robotics stack is supported on <a class="reference external" href="http://wiki.ros.org/kinetic">ROS Kinetic</a>
 and <a class="reference external" href="http://releases.ubuntu.com/16.04">Ubuntu 16.04</a> (Xenial).
 The following commands will install ROS on a fresh Ubuntu 16.04 system.</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>sudo sh -c &#39;echo &quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;
-sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
-sudo apt-get update
-sudo apt-get install ros-kinetic-desktop-full
-apt-cache search ros-kinetic
-sudo rosdep init
-rosdep update
-echo &quot;source /opt/ros/kinetic/setup.bash&quot; &gt;&gt; ~/.bashrc
-source ~/.bashrc
-sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential ros-kinetic-rosbridge-server
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sh</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;echo &quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">key</span> <span class="n">adv</span> <span class="o">--</span><span class="n">keyserver</span> <span class="n">hkp</span><span class="p">:</span><span class="o">//</span><span class="n">ha</span><span class="o">.</span><span class="n">pool</span><span class="o">.</span><span class="n">sks</span><span class="o">-</span><span class="n">keyservers</span><span class="o">.</span><span class="n">net</span><span class="p">:</span><span class="mi">80</span> <span class="o">--</span><span class="n">recv</span><span class="o">-</span><span class="n">key</span> <span class="mi">421</span><span class="n">C365BD9FF1F717815A3895523BAEEB01FA116</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ros</span><span class="o">-</span><span class="n">kinetic</span><span class="o">-</span><span class="n">desktop</span><span class="o">-</span><span class="n">full</span>
+<span class="n">apt</span><span class="o">-</span><span class="n">cache</span> <span class="n">search</span> <span class="n">ros</span><span class="o">-</span><span class="n">kinetic</span>
+<span class="n">sudo</span> <span class="n">rosdep</span> <span class="n">init</span>
+<span class="n">rosdep</span> <span class="n">update</span>
+<span class="n">echo</span> <span class="s2">&quot;source /opt/ros/kinetic/setup.bash&quot;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">bashrc</span>
+<span class="n">source</span> <span class="o">~/.</span><span class="n">bashrc</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">rosinstall</span> <span class="n">python</span><span class="o">-</span><span class="n">rosinstall</span><span class="o">-</span><span class="n">generator</span> <span class="n">python</span><span class="o">-</span><span class="n">wstool</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">ros</span><span class="o">-</span><span class="n">kinetic</span><span class="o">-</span><span class="n">rosbridge</span><span class="o">-</span><span class="n">server</span>
 </pre></div>
 </div>
 <p>The official installation guide can be found <a class="reference external" href="http://wiki.ros.org/kinetic/Installation/Ubuntu">here</a>.</p>
@@ -163,15 +184,16 @@ sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="raspberry.html" class="btn btn-neutral float-right" title="Raspberry Pi" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="raspberry.html" class="btn btn-neutral float-right" title="Raspberry Pi" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="setup.html" class="btn btn-neutral" title="Setup environment" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="setup.html" class="btn btn-neutral" title="Setup environment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -184,7 +206,7 @@ sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -203,9 +225,11 @@ sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
@@ -214,19 +238,13 @@ sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool
 
   
 
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>
